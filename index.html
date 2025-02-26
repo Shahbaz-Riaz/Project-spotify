@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify project</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utiility.css" />
+  </head>
+  <body>
+    <!-- <img src="logo.svg" alt=""> -->
+    <div class="container flex bg-jblack">
+      <div class="left ">
+        <div class="home bg-black rounded m-1 p-1">
+          <div class="logo">
+            <img class="invert" src="logo.svg" alt="logo" />Spotify
+          </div>
+          <ul>
+            <li><img class="invert" src="home.svg" alt="home" />home</li>
+            <li><img class="invert" src="search.svg" alt="search" />search</li>
+          </ul>
+        </div>
+        <div class="library bg-black rounded m-1 p-1">
+          <div class="heading">
+            <img class="invert" src="lib.svg" alt="" />
+            <h2>Your Library</h2>
+          </div>
+          <div class="song-list ">
+
+          </div>
+        </div>
+      </div>
+      <div class="right  ">
+        <div class="header bg-black rounded">
+          <div class="nav invert">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              color="#000000"
+              fill="none"
+            >
+              <path
+                d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              color="#000000"
+              fill="none"
+            >
+              <path
+                d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="btns">
+            <button class="sign-btn">Sign Up</button>
+            <button class="log-btn">LogIn</button>
+          </div>
+        </div>
+
+
+        <!-- playlist containing albums -->
+        <div class="playlist bg-black rounded ">
+          <h2 id="spot">Spotify Playlist</h2>
+          <div class="cards-container">
+
+
+
+
+          </div>
+
+
+
+
+          <div class="playbar">
+           
+            
+            <div class="song-info"></div>
+            <div class="music-buttons">
+
+              <img id="prev" src="prev.svg" alt="">
+              <img id="play" src="play.svg" alt="">
+              <img style="display: none;" id="pause" src="pause.svg" alt="">
+              <img id="next" src="next.svg" alt="">
+            </div>
+            <div class="seekbar">
+              <div class="circle"></div>
+            </div>
+            <div class="song-time"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
