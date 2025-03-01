@@ -21,6 +21,9 @@
     text-transform: uppercase;
     font-size: 22px;
 }
+.cross{
+    display: none;
+}
 
 .container{
     height: 100vh;
@@ -117,6 +120,10 @@
 
 .header > *{
     padding: 20px;
+}
+
+.hambg{
+    display: none;
 }
 
 .playlist{
@@ -296,23 +303,56 @@
 }
 
 
-
-
-
-
-
-/* 
-@media screen and (max-width: 600px) {
-    body {
-        font-size: 14px;
-        padding: 10px;
-    }
+@media (max-width: 900px) {
     .left{
-        width: 100%;
+        position: absolute;
+        left: -100%;
+        transition: all .3s;
+        z-index: 1;
+        width: 350px;
+        background-color: black;
+        
+
     }
     .right{
-        width: 0;
+        width: 100%;
+        /* background-color: red; */
+      }
+    .header{
+        width: 100%;
     }
+    .playlist{
+        width: 100%;
+    }
+    .hambg{
+        display: block;
+        width: 70px;
+    }
+    .nav{
+        display: none;
+    }
+    
+    .logo{
+        display: flex;
+        justify-content: space-between;
+    }
+    .cross{
+        display: block;
+    }
+  }
+  
 
+  @media  (max-width: 600px) {
+    .card{
+        width: 100%;
     }
-     */
+    body{
+        overflow-y: hidden;
+    }
+    
+    .playbar{
+        bottom: 12px;
+    }
+  }
+
+

@@ -14,7 +14,7 @@ function formatTime(seconds){
 
 
 async function getSongs(){
-    let a = await fetch("http://127.0.0.1:5500/songs/")
+    let a = await fetch("songs/")
     let response = await a.text()
     let div = document.createElement("div")
     div.innerHTML = response
@@ -38,7 +38,7 @@ async function getSongs(){
 
 
 async function loadImage() {
-    let imgData = await fetch("http://127.0.0.1:5500/songsThumbnail/")
+    let imgData = await fetch("songsThumbnail/")
     let data = await imgData.text()
     let div = document.createElement("div")
     div.innerHTML = data
@@ -251,22 +251,6 @@ function titleFetch(){
 }
 
 
-// function addTimer(audio) {
-//     let songTime = document.querySelector(".song-time");
-//     let span = document.createElement("span");
-//     songTime.innerHTML = ""
-//     songTime.appendChild(span);
-
-//     audio.addEventListener("timeupdate", () => {
-//         if (!audio.duration) return; // Prevent NaN issues
-
-//         let currentTime = formatTime(audio.currentTime);
-//         let duration = formatTime(audio.duration);
-
-//         span.innerHTML = `${currentTime} / ${duration}`;
-//     });
-// }
-
 function addTimer(audio) {
     let songTime = document.querySelector(".song-time");
     
@@ -301,6 +285,17 @@ document.getElementById("play").addEventListener("click",play)
 document.getElementById("pause").addEventListener("click",play)
 document.getElementById("next").addEventListener("click",next)
 document.getElementById("prev").addEventListener("click",previous)
+
+// event listner for hamburger
+
+let hamburger = document.querySelector(".hambg")
+hamburger.addEventListener("click",()=>{
+    document.querySelector(".left").style.left = "0"
+})
+let cross = document.querySelector(".cross")
+cross.addEventListener("click",()=>{
+    document.querySelector(".left").style.left = "-100%"
+})
    
 
 
